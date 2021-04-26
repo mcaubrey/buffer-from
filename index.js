@@ -1,5 +1,9 @@
 /* eslint-disable node/no-deprecated-api */
 
+if (typeof Buffer === 'undefined') {
+  global.Buffer = require('buffer').Buffer
+}
+
 var toString = Object.prototype.toString
 
 var isModern = (
